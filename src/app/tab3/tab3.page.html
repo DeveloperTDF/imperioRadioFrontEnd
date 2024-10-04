@@ -6,9 +6,18 @@
     <ion-card-title class="title">PROGRAMAS 2024</ion-card-title>
   </ion-card>
   <ion-card>
+    <ion-list>
+      <!-- Itera sobre los items usando ngFor -->
+      <ion-item *ngFor="let item of items">
+        <ion-label>{{ item.title }}</ion-label>
+        <audio controls>
+          <source [src]="item.src" type="audio/mpeg" />
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </ion-item>
+    </ion-list>
     
-    
-  <ion-list>
+  <!-- <ion-list>
     <ion-item>
       <ion-label>Programa numero 18</ion-label>
     </ion-item>
@@ -222,7 +231,7 @@
       </audio>
     </ion-item>
     
-  </ion-list>
+  </ion-list> -->
 </ion-card>
 </ion-content>
 
