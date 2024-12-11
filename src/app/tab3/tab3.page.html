@@ -1,4 +1,4 @@
-
+<!-- 
 
 
 <ion-content [fullscreen]="true" >
@@ -7,7 +7,7 @@
   </ion-card>
   <ion-card>
     <ion-list>
-      <!-- Itera sobre los items usando ngFor -->
+      
       <ion-item *ngFor="let item of items">
         <ion-label>{{ item.title }}</ion-label>
         <audio controls class="wide-audio">
@@ -23,4 +23,28 @@
 
 
 
-
+ -->
+ <ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-title class="title">PROGRAMAS 2024</ion-card-title>
+  </ion-card>
+  <ion-card>
+    <ion-list>
+      <ion-item *ngFor="let item of items; let i = index">
+        <ion-label>{{ item.title }}</ion-label>
+        <audio 
+          #audioPlayer
+          controls 
+          class="wide-audio"
+          [id]="'audio-' + i"
+          (play)="onPlay(i)"
+          (pause)="onPause(i)"
+          (timeupdate)="onTimeUpdate($event, i)"
+          (loadedmetadata)="onMetadataLoaded($event, i)">
+          <source [src]="item.src" type="audio/mpeg" />
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

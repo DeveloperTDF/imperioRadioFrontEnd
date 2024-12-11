@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page {
+export class Tab3Page implements OnInit {
   
 
   items = [
@@ -41,7 +41,62 @@ export class Tab3Page {
     
   ];
 
-  constructor() {}
+  ngOnInit() {
+    // Restaurar estado al cargar la página
+    this.restoreAudioState();
+  }
+
+  onPlay(index: number) {
+    // Detener otros audios
+    this.pauseAllExcept(index);
+  }
+
+  onPause(index: number) {
+    // Opción para manejar eventos de pausa si lo necesitas
+  }
+
+  onTimeUpdate(event: Event, index: number) {
+    const audio = event.target as HTMLAudioElement;
+    const audioState = this.getAudioState(index);
+    audioState.currentTime = audio.currentTime;
+    this.saveAudioState(index, audioState);
+  }
+
+  onMetadataLoaded(event: Event, index: number) {
+    const audio = event.target as HTMLAudioElement;
+    const audioState = this.getAudioState(index);
+    if (audioState.currentTime) {
+      audio.currentTime = audioState.currentTime;
+    }
+  }
+
+  pauseAllExcept(index: number) {
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((audio, i) => {
+      if (i !== index) {
+        (audio as HTMLAudioElement).pause();
+      }
+    });
+  }
+
+  getAudioState(index: number): { currentTime: number } {
+    const state = localStorage.getItem(`audio-${index}`);
+    return state ? JSON.parse(state) : { currentTime: 0 };
+  }
+
+  saveAudioState(index: number, state: { currentTime: number }) {
+    localStorage.setItem(`audio-${index}`, JSON.stringify(state));
+  }
+
+  restoreAudioState() {
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((audio, index) => {
+      const audioState = this.getAudioState(index);
+      if (audioState.currentTime) {
+        (audio as HTMLAudioElement).currentTime = audioState.currentTime;
+      }
+    });
+  }
 
 }
       
