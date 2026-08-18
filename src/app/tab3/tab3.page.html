@@ -1,5 +1,5 @@
 
-<ion-content [fullscreen]="true" >
+<!-- <ion-content [fullscreen]="true" >
   <ion-card>
     <ion-card-title class="title">PROGRAMAS 2024</ion-card-title>
   </ion-card>
@@ -17,9 +17,106 @@
     
   
 </ion-card>
+</ion-content> -->
+
+
+
+ <ion-content [fullscreen]="true" class="catalog-content">
+
+ <!-- Encabezado del Catálogo -->
+<div class="catalog-header ion-padding-horizontal ion-text-center">
+  <span class="badge-subtitle">CATÁLOGO</span>
+  <h1 class="main-title">PROGRAMAS <span>2026</span></h1>
+  <p class="description">Selecciona un programa para escuchar</p>
+  <div class="header-divider"></div>
+</div>
+
+  <!-- Grilla tipo Catálogo -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let item of items2; let x = index">
+        
+        <ion-card class="program-card">
+          <!-- Poster / Imagen del programa -->
+          <div class="poster-container">
+            <!-- Imagen por defecto (puedes cambiar esta URL por la carátula de tu programa) -->
+            <img [src]="item.image || 'assets/default-cover.jpg'" [alt]="item.title" class="poster-img" />
+            
+            <!-- Badge que toma la posición en la lista (#1, #2, etc.) -->
+            <ion-badge color="primary" class="program-number">
+              #{{ items2.length - x }}
+            </ion-badge>
+          </div>
+
+          <!-- Detalles y Reproductor -->
+          <ion-card-header>
+            <ion-card-title class="program-title" [attr.title]="item.title">
+              {{ item.title }}
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content class="audio-container">
+            <audio controls class="wide-audio" preload="none">
+              <source [src]="item.src" type="audio/mpeg" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+   <!-- Encabezado del Catálogo -->
+<div class="catalog-header ion-padding-horizontal ion-text-center">
+  <span class="badge-subtitle">CATÁLOGO (EN MANTENIMIENTO Y RENOVACION)</span>
+  <h1 class="main-title">PROGRAMAS <span>2024</span></h1>
+  <p class="description">Selecciona un programa para escuchar</p>
+  <div class="header-divider"></div>
+</div>
+
+  
+  <!-- Encabezado del Catálogo
+  <div class="catalog-header">
+    <h1>PROGRAMAS 2024</h1>
+    <p>Selecciona un programa para escuchar</p>
+  </div>
+
+  <!-- Grilla tipo Catálogo -->
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let item of items; let i = index">
+        
+        <ion-card class="program-card">
+          Poster / Imagen del programa -->
+          <!-- <div class="poster-container"> -->
+            <!-- Imagen por defecto (puedes cambiar esta URL por la carátula de tu programa) -->
+            <!-- <img [src]="item.image || 'assets/default-cover.jpg'" [alt]="item.title" class="poster-img" /> -->
+            
+            <!-- Badge que toma la posición en la lista (#1, #2, etc.) -->
+            <!-- <ion-badge color="primary" class="program-number">
+              #{{ items.length - i }}
+            </ion-badge>
+          </div> -->
+
+          <!-- Detalles y Reproductor -->
+          <!-- <ion-card-header>
+            <ion-card-title class="program-title" [attr.title]="item.title">
+              {{ item.title }}
+            </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content class="audio-container">
+            <audio controls class="wide-audio" preload="none">
+              <source [src]="item.src" type="audio/mpeg" />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
 </ion-content>
-
-
-
- 
  
