@@ -1,0 +1,2 @@
+codigo scrip para que suba en github solo automaticamente todo
+/run/media/$USER/DEV_USB/git-sync.sh "Mi commit"
