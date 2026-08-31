@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class Tab3Page  {
   
   items2 = [
-    
-    { title: 'programa numero 3', src:'https://audio.ivoox.com/audio/4/1/0/4/imperio20263erprograma-carlosdomingofernandez-ivoox179424014.mp3?secure=hXLC0HhEl3rl0uxy7sLpWA==,1787796958',image:'/assets/programa-3.jpg'},
-    {  title: 'programa numero 2', src:'https://audio.ivoox.com/audio/2/6/1/1/imperio20262doprograma13082026-carlosdomingofernandez-ivoox179051162.mp3?secure=gKFVrHb910abz6Vt0HeNyA==,1787102062',image:'/assets/programa-2.jpg'},
-    {  title: 'programa numero 1', src:'https://audio.ivoox.com/audio/3/0/8/3/imperio20261erprograma-carlosdomingofernandez-ivoox178793803.mp3?secure=U400MWXLAR3ymamSno8pAg==,1787100753',image:'/assets/programa-1.jpg'},
+    { title: 'programa numero 3', src:'https://audio.ivoox.com/audio/4/1/0/4/imperio20263erprograma-carlosdomingofernandez-ivoox179424014.mp3?secure=CEayrq9FEwnHejnNxFtKKw==,1788224292',image:'/assets/programa-3.jpg'},
+    { title: 'programa numero 2', src:'https://audio.ivoox.com/audio/2/6/1/1/imperio20262doprograma13082026-carlosdomingofernandez-ivoox179051162.mp3?secure=g7Yfp41g6jWSeBEfdMh0zg==,1788225158',image:'/assets/programa-2.jpg'},
+    { title: 'programa numero 1', src:'https://audio.ivoox.com/audio/3/0/8/3/imperio20261erprograma-carlosdomingofernandez-ivoox178793803.mp3?secure=WWbRtmmvV0BJgYR6rBJj5A==,1788225333',image:'/assets/programa-1.jpg'},
   ];
   items = [
     { title: 'Programa numero 33', src: 'https://ivoox.mc.tritondigital.com/IVOOX_0_128_P/media/7e123068f7-imperio-33er-programa-2024-audios-mp3_mw_137996511_398fbf32b05bae51ad54ba8dd5c6fea4a506e436e0168e1b16a51a13ac87b4ce_1.mp3?gdpr=1&gdpr_consent=CQLohIAQLohIAAHABBENBZFsAP_gAEPgAAAAKwtX_G__bWlr8X73aftkeY1P99h77sQxBhbJE-4FzLvW_JwXx2ExNA36tqIKmRIAu3TBIQNlHJDURVCgaogVryDMaEyUoTNKJ6BkiFMRI2dYCFxvm4tjeQCY5vr991dx2B-t7dr83dzyy4hHn3a5_2S0WJCdA5-tDfv9bROb-9IOd_x8v4v4_F7pE2_eT1l_tWvp7D9-cts_9XW99_fbff9Pn_-uB_-_X_vf_H36Cr4BJhoVEAZYEhIQaBhBAgBUFYQEUCAIAAEgaICAEwYFOwMAF1hIgBACgAGCAEAAIMgAQAAAQAIRABAAUCAACAQKAAMACAYCAAgYAAQAWAgEAAIDoGKYEEAgWACRmRUKYEIQCQQEtlQgkAQIK4QhFngEQCImCgAAAAAKQABAWCwOJJASoSCALiCaAAAgAQCCAAoQScmAAIAzZag8GTaMrTAMHzBIhpgGQBEEZCQaAAAA.f_wACHwAAAAA',image: 'assets/portada-programa-33.jpg'},
