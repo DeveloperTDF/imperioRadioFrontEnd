@@ -68,3 +68,5 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+echo "src/assets/programas/*.mp3" >> .gitignore
