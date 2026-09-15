@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class Tab3Page  {
   
   items2 = [
+    { title: 'programa numero 6', src:'https://ia903202.us.archive.org/14/items/imperio20266toprograma10092026-carlosdomingofernandez-ivoox180559687/imperio20266toprograma10092026-carlosdomingofernandez-ivoox180559687.mp3',image:'/assets/programa-6.jpg'},
     { title: 'programa numero 5', src:'https://archive.org/serve/imperio20265toprograma03092026-carlosdomingofernandez-ivoox180152494/imperio20265toprograma03092026-carlosdomingofernandez-ivoox180152494.mp3',image:'/assets/programa-5.jpg'},
     { title: 'programa numero 4', src:'https://dn710300.ca.archive.org/0/items/4_20260902/4.mp3',image:'/assets/programa-4.jpg'},
     { title: 'programa numero 3', src:'https://archive.org/download/3_20260902_20260902_0134/3.mp3',image:'/assets/programa-3.jpg'},
