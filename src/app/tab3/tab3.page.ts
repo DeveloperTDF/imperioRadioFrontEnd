@@ -10,6 +10,7 @@ export class Tab3Page  {
   items2 = [
     
 
+    { title: 'programa numero 12', src:'https://ia601001.us.archive.org/21/items/imperio202612doprograma22102026-carlosdomingofernandez-ivoox182808816/imperio202612doprograma22102026-carlosdomingofernandez-ivoox182808816.mp3',image:'/assets/programa-12.jpg'},
     { title: 'programa numero 11', src:'https://ia600405.us.archive.org/8/items/imperio202611moprograma10102026-carlosdomingofernandez-ivoox182436647/imperio202611moprograma10102026-carlosdomingofernandez-ivoox182436647.mp3',image:'/assets/programa-11.jpg'},
     { title: 'programa numero 10', src:'https://archive.org/serve/imperio202610moprograma08102026-carlosdomingofernandez-ivoox182064185/imperio202610moprograma08102026-carlosdomingofernandez-ivoox182064185.mp3',image:'/assets/programa-10.jpg'},
     { title: 'programa numero 9', src:'https://ia600501.us.archive.org/18/items/imperio20269noprograma-carlosdomingofernandez-ivoox181697637/imperio20269noprograma-carlosdomingofernandez-ivoox181697637.mp3',image:'/assets/programa-9.jpg'},
